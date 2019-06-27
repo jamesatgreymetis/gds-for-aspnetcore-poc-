@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gds.frontend.aspnetcore.poc.web", "gds.frontend.aspnetcore.poc.web\gds.frontend.aspnetcore.poc.web.csproj", "{4A152A20-3FB3-4CC3-9F76-950E2B2A5B37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gds.frontend.aspnetcore.poc.taghelpers", "gds.frontend.aspnetcore.poc.taghelpers\gds.frontend.aspnetcore.poc.taghelpers.csproj", "{5B9B675B-98C6-41BA-B32D-8C50B19A0331}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A152A20-3FB3-4CC3-9F76-950E2B2A5B37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A152A20-3FB3-4CC3-9F76-950E2B2A5B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A152A20-3FB3-4CC3-9F76-950E2B2A5B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A152A20-3FB3-4CC3-9F76-950E2B2A5B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9B675B-98C6-41BA-B32D-8C50B19A0331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9B675B-98C6-41BA-B32D-8C50B19A0331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9B675B-98C6-41BA-B32D-8C50B19A0331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9B675B-98C6-41BA-B32D-8C50B19A0331}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB1485A8-4DDC-443F-ADCC-D4732C54A5B1}
+	EndGlobalSection
+EndGlobal

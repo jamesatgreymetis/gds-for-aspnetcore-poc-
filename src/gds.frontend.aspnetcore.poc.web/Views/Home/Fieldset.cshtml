@@ -1,0 +1,50 @@
+﻿@using gds.frontend.aspnetcore.poc.taghelpers.Models
+@{
+    ViewData["Title"] = "Home Page";
+    Legend model = new Legend() {
+        Text = "Legend title"
+    };
+
+    Label labelModel = new Label(){
+        For = "event-id",
+        Text = "nested input helpertag"       
+    };
+}
+
+<h2 class="govuk-heading-m">Fieldset Example</h2>
+
+<h3 class="govuk-heading-s">Tag helper</h3>
+<div class="govuk-form-group">
+    <gov-uk-fieldset legend="model">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+                manual html in helpertag <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+        </div>
+
+        <gov-uk-text-input id="eventId" name="event-name" label="labelModel" hint="@(new Hint(){Text = "Hint text goes here", Id = "hint-id"})"></gov-uk-text-input>
+    </gov-uk-fieldset>
+</div>
+
+
+<h3 class="govuk-heading-s">Reference html</h3>
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                What is your address?
+            </h1>
+        </legend>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+                Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+        </div>
+
+    </fieldset>
+</div>
+
+<hr />

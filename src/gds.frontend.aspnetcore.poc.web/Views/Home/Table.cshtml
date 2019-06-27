@@ -1,0 +1,210 @@
+﻿@using gds.frontend.aspnetcore.poc.taghelpers.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2 class="govuk-heading-l">Table</h2>
+
+<h3 class="govuk-heading-m">Table Example</h3>
+
+@{
+    var example1Model = new Table()
+    {
+        Caption = "Dates and amounts",
+        BodyRows = new List<Row>()
+        {
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell() {Text = "First 6 weeks"},
+                    new Cell() {Text = "£109.80 per week"}
+                }
+            },
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell() {Text = "Next 33 weeks"},
+                    new Cell() {Text = "£109.80 per week"}
+                }
+            }
+        },
+        HeadRows = new List<Row>()
+        {
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell() {Text = "Date"},
+                    new Cell() {Text = "Amount"}
+                }
+
+            }
+        }
+    };
+}
+
+<gov-uk-table table="@example1Model"></gov-uk-table>
+
+@{
+    var example2Model = new Table()
+    {
+        Caption = "Months and rates",
+        BodyRows = new List<Row>()
+        {
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell() {Text = "January"},
+                    new Cell() {Text = "£85", Format = Format.Numeric},
+                    new Cell() {Text = "£95", Format = Format.Numeric}
+                }
+            },
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell() {Text = "February"},
+                    new Cell() {Text = "£75", Format = Format.Numeric},
+                    new Cell() {Text = "£55", Format = Format.Numeric}
+                }
+            }
+        },    
+        HeadRows = new List<Row>()
+        {
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell() {Text = "Month you apply"},
+                    new Cell() {Text = "Rate for bicycles", Format = Format.Numeric},
+                    new Cell() {Text = "Rate for vehicles", Format = Format.Numeric}
+                }
+
+            }
+        }
+    };
+}
+<h3 class="govuk-heading-m">Numbers in a table</h3>
+<gov-uk-table table="@example2Model"></gov-uk-table>
+
+@{
+    var example3Model = new Table()
+    {
+        Caption = "Month you apply",
+        BodyRows= new List<Row>()
+{
+    new Row()
+    {
+        Cells = new List<Cell>()
+        {
+            new Cell() {Text = "First 6 weeks"},
+            new Cell() {Text = "£109.80 per week"},
+            new Cell() {Text = "59.10 per week"}
+        }
+    },
+    new Row()
+    {
+        Cells = new List<Cell>()
+        {
+            new Cell() {Text = "Next 33 weeks"},
+            new Cell() {Text = "£159.80 per week"},
+            new Cell() {Text = "£89.10 per week"}
+        }
+    },
+    new Row()
+    {
+        Cells = new List<Cell>()
+        {
+            new Cell() {Text = "Total estimated pay"},
+            new Cell() {Text = "£4,282.20"},
+            new Cell() {Text = "£2,182.20"}
+        }
+    }
+},
+        HeadRows = new List<Row>()
+        {
+            new Row()
+            {
+                Cells =  new List<Cell>()
+                {
+                    new Cell() {Text = "Date", Classes= "govuk-!-width-one-half"},
+                    new Cell() {Text = "Rate for vehicles", Classes= "govuk-!-width-one-quarter"},
+                    new Cell() {Text = "Rate for bicycles", Classes= "govuk-!-width-one-quarter"}
+                }
+            }
+        }
+    };
+}
+<h3 class="govuk-heading-m">Custom column widths</h3>
+<gov-uk-table table="@example3Model"></gov-uk-table>
+
+@{
+    var example4Model = new Table()
+    {
+        Caption = "Month you apply",
+        HeadRows = new List<Row>()
+        {
+            new Row()
+            {
+                Cells =  new List<Cell>()
+                {
+                    new Cell(){Text = "head row span", Colspan = 6}
+                },
+            },
+            new Row()
+            {
+                Cells =  new List<Cell>()
+                {
+                    new Cell(){Text = "1"},
+                    new Cell(){Text = "2"},
+                    new Cell(){Text = "3"},
+                    new Cell(){Text = "4"},
+                    new Cell(){Text = "5"},
+                    new Cell(){Text = "6"}
+                },
+            }
+        },
+        BodyRows = new List<Row>()
+        {
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell() {Text = "rowspan 0", Rowspan = 0},
+                    new Cell(){Text = "1", Attributes = new {data_attrib = "foo"}},
+                    new Cell(){Text = "2"},
+                    new Cell(){Text = "3"},
+                    new Cell(){Text = "4"},
+                    new Cell() {Text = "rowspan 2", Rowspan = 2}
+                }
+            },
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell(){Text = "5"},
+                    new Cell(){Text = "6"},
+                    new Cell(){Text = "7"},
+                    new Cell(){Text = "8"},
+                }
+            },
+            new Row()
+            {
+                Cells = new List<Cell>()
+                {
+                    new Cell(){Text = "-"},
+                    new Cell(){Text = "-"},
+                    new Cell(){Text = "-"},
+                    new Cell(){Text = "-"},
+                    new Cell(){Text = "-"},
+                }
+            }
+        }
+    };
+}
+
+<h3 class="govuk-heading-m">Colspan & Rowspan</h3>
+<gov-uk-table table="@example4Model"></gov-uk-table>
+<hr />

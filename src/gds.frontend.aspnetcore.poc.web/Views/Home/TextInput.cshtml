@@ -1,0 +1,10 @@
+﻿@using gds.frontend.aspnetcore.poc.taghelpers.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2 class="govuk-heading-m">Text Input</h2>
+
+<h3 class="govuk-heading-s">Text Input</h3>
+<gov-uk-text-input id="input-id" name="input-name" label="@(new Label(){ Text = "Input label text", For="input-id" })"></gov-uk-text-input>
+
+<hr />

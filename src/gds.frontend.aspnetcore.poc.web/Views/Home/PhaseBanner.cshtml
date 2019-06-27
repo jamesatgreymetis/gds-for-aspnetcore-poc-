@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h2 class="govuk-heading-m">Phase Banner example</h2>
+
+<h3 class="govuk-heading-s">Text example</h3>
+
+<gov-uk-phase-banner tag="Alpha" text="This is a new service – your feedback will help us to improve it."></gov-uk-phase-banner>
+
+<h3 class="govuk-heading-s">Html example</h3>
+
+@{
+
+    var text = "This is a new service – your <a class=\"govuk-link\" href=\"#\">feedback</a> will help us to improve it.";
+}
+
+<gov-uk-phase-banner tag="Alpha" html="@text"></gov-uk-phase-banner>
+
